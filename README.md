@@ -2,49 +2,28 @@
 
 ### 1. Motor Configuration Selection
 
-Four candidate motor configurations were considered.  
-The comparison assumes identical motors and comparable wheel sizes.
+Four candidate drive configurations were considered under the same motor and wheel assumptions.
 
 | Criterion | 2M: Left–Right | 2M: Front–Rear | 3M | 4M |
 |---|---|---|---|---|
-| **Mass / power demand** | Low | Low | Medium | High |
-| **Heading sensitivity to speed mismatch** | High | Low | Layout-dependent | Layout-dependent |
-| **Drive-force potential** | Low–Medium | Low–Medium | Medium–High | High |
-| **Implementation complexity** | Low | Low | Medium | High |
+| **Mass / power demand** | Low | **Low** | Medium | High |
+| **L/R speed mismatch** | Causes yaw | **No L/R drive pair** | Layout-dependent | Requires L/R matching |
+| **Straight-line robustness** | Low | **High** | Layout-dependent | Medium |
+| **Fore–aft symmetry** | Layout-dependent | **High** | Low / layout-dependent | High |
+| **Forward–reverse suitability** | Medium | **High** | Layout-dependent | High |
+| **Implementation complexity** | Low | **Low** | Medium | High |
 
-For a left–right drive, the robot yaw rate can be approximated by
-
-$$
-\omega = \frac{v_R-v_L}{b}
-$$
-
-where:
-
-- $v_L$ = left-wheel velocity
-- $v_R$ = right-wheel velocity
-- $b$ = wheel separation
-- $\omega$ = yaw rate
-
-Therefore,
+For a left–right drive,
 
 $$
-v_L \neq v_R
-\quad \Rightarrow \quad
-\omega \neq 0
+\omega \approx \frac{v_R-v_L}{b}
 $$
 
-A small speed mismatch between the left and right motors can therefore cause deviation from straight-line motion under open-loop control.
+so any left–right speed mismatch directly introduces a yaw rate.
 
-**Selected configuration: 2-motor front–rear drive**
+**Selected: 2-motor front–rear configuration**
 
-The front–rear configuration was selected because it:
-
-- maintains low mass and power demand;
-- reduces heading sensitivity to motor-speed mismatch;
-- requires fewer motors and simpler control;
-- provides sufficient driving force for the obstacle course.
-
-This configuration was then used as the basis for the wheel-size and chassis-geometry analysis.
+It provides low mass and complexity while avoiding L/R motor-induced yaw and maintaining a symmetric drivetrain for both forward and reverse motion.
 
 ---
 
