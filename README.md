@@ -6,11 +6,11 @@ Candidate drive layouts were compared assuming identical motors and wheels.
 
 | Criterion | 2M: L–R | 2M: F–R | 3M: 2F+1R | 3M: 1F+2R | 4M: 2F+2R |
 |---|---|---|---|---|---|
-| **Added mass** | Low | **Low** | Medium | Medium | High |
-| **L/R speed mismatch** | Causes yaw | **No L/R drive pair** | Causes yaw | Causes yaw | Requires L/R matching |
-| **Fore–aft symmetry** | High | **High** | Low | Low | High |
-| **Static stability** | High | **High** | High | High | High |
-| **Implementation complexity** | Low | **Low** | Medium | Medium | High |
+| **Added mass** | Low | Low | Medium | Medium | High |
+| **L/R speed mismatch** | Causes yaw | No L/R drive pair | Causes yaw | Causes yaw | Requires L/R matching |
+| **Fore–aft symmetry** | High | High | Low | Low | High |
+| **Static stability** | Low | Low | Medium | Medium | High |
+| **Implementation complexity** | Low | Low | Medium | Medium | High |
 
 For a left–right drive,
 
@@ -22,7 +22,7 @@ where $b$ is the track width. Thus, unequal left–right wheel speeds directly i
 
 **Selected: 2-motor front–rear configuration**
 
-It provides low mass and complexity, avoids L/R motor-speed mismatch, and maintains a stable, fore–aft symmetric structure for bidirectional motion.
+It provides low mass and complexity, avoids L/R motor-speed mismatch, and maintains good fore–aft symmetry for bidirectional motion.
 
 ---
 
