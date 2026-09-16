@@ -6,35 +6,22 @@ Different motor counts and layouts were compared.
 
 | Config. | Typical Layout | Pros | Cons |
 |---|---|---|---|
-| **2 motors** | 1 left + 1 right | Symmetric drive; simple differential steering; low mass; low power consumption; easy control | Lower total traction and torque |
-| **3 motors** | 2 rear + 1 front / 2 front + 1 rear | Higher traction than 2 motors; more driving force available | Asymmetric force distribution; harder speed matching; more complex control; uneven load sharing |
-| **4 motors** | 1 motor per wheel | Highest traction; high driving torque; good force distribution | Highest mass; high current consumption; more wiring; motor synchronization required |
+| **2 motors** | 1 front + 1 rear | <ul><li>Low mass</li><li>Low power consumption</li><li>Simple structure</li><li>Fewer components</li></ul> | <ul><li>Lower total traction</li><li>Lower available torque</li><li>More sensitive to weight distribution</li></ul> |
+| **3 motors** | 2 front + 1 rear / 1 front + 2 rear | <ul><li>Higher driving force</li><li>Better traction</li><li>More flexible motor placement</li></ul> | <ul><li>Asymmetric force distribution</li><li>Uneven load sharing</li><li>Harder motor synchronisation</li><li>Higher mass and power consumption</li></ul> |
+| **4 motors** | 2 front + 2 rear | <ul><li>Highest driving force</li><li>High traction</li><li>Balanced force distribution</li><li>Good load sharing</li></ul> | <ul><li>Highest mass</li><li>Highest power consumption</li><li>More wiring</li><li>More complex motor synchronisation</li></ul> |
 
-**Selected: 2-motor differential drive**
+**Selected: 2-motor front–rear configuration**
 
 Main reasons:
-
-- symmetric force distribution;
-- simplest control architecture;
 - lower mass and power consumption;
-- fewer motors to synchronise;
-- sufficient torque for the obstacle course.
+- simpler mechanical structure;
+- fewer motors to control and synchronise;
+- sufficient driving force for the required obstacles;
+- compact layout suitable for the chassis design.
 
-Motor layout:
+**Main trade-off:**  
+Lower driving force → wheel size, chassis geometry and weight distribution require further optimisation.
 
-$$
-\text{Left Motor} \qquad \boxed{\text{Chassis}} \qquad \text{Right Motor}
-$$
-
-Steering is achieved by controlling the wheel speeds independently:
-
-$$
-v_L = v_R \Rightarrow \text{Straight}
-$$
-
-$$
-v_L \neq v_R \Rightarrow \text{Turning}
-$$
 ---
 
 ### 2. Physics-Based Design
