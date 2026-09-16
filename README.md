@@ -9,6 +9,7 @@ Candidate drive layouts were compared assuming identical motors and wheels.
 | **Added mass** | Low | **Low** | Medium | Medium | High |
 | **L/R speed mismatch** | Causes yaw | **No L/R drive pair** | Causes yaw | Causes yaw | Requires L/R matching |
 | **Fore–aft symmetry** | Medium | **High** | Low | Low | High |
+| **Static stability** | Requires fore–aft support | **Requires lateral support** | High | High | High |
 | **Implementation complexity** | Low | **Low** | Medium | Medium | High |
 
 For a left–right drive,
@@ -21,7 +22,7 @@ so unequal left–right wheel speeds introduce yaw.
 
 **Selected: 2-motor front–rear configuration**
 
-It combines low mass and complexity with no L/R drive mismatch and high fore–aft symmetry for bidirectional motion.
+It offers low mass, low complexity, and fore–aft symmetry, while the reduced lateral stability is compensated by passive lateral support.
 
 ---
 
