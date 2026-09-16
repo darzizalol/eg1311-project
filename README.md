@@ -2,14 +2,14 @@
 
 ### 1. Motor Configuration Selection
 
-Four candidate drive configurations were considered under the same motor and wheel assumptions.
+Candidate drive layouts were compared assuming identical motors and wheels.
 
-| Criterion | 2M: Left–Right | 2M: Front–Rear | 3M | 4M |
-|---|---|---|---|---|
-| **Mass / power demand** | Low | **Low** | Medium | High |
-| **Sensitivity to L/R speed mismatch** | High — induces yaw | **Low — no L/R drive pair** | Layout-dependent | Requires L/R matching |
-| **Fore–aft symmetry / bidirectional suitability** | Layout-dependent | **High** | Layout-dependent | High if symmetrically arranged |
-| **Implementation complexity** | Low | **Low** | Medium | High |
+| Criterion | 2M: L–R | 2M: F–R | 3M: 2F+1R | 3M: 1F+2R | 4M: 2F+2R |
+|---|---|---|---|---|---|
+| **Added mass** | Low | **Low** | Medium | Medium | High |
+| **L/R speed mismatch** | Causes yaw | **No L/R drive pair** | Causes yaw | Causes yaw | Requires L/R matching |
+| **Fore–aft symmetry** | Medium | **High** | Low | Low | High |
+| **Implementation complexity** | Low | **Low** | Medium | Medium | High |
 
 For a left–right drive,
 
@@ -17,11 +17,11 @@ $$
 \omega \approx \frac{v_R-v_L}{b}
 $$
 
-so a left–right speed mismatch directly introduces yaw.
+so unequal left–right wheel speeds introduce yaw.
 
 **Selected: 2-motor front–rear configuration**
 
-It provides low mass and complexity, avoids L/R motor-induced yaw, and preserves fore–aft symmetry for bidirectional motion.
+It combines low mass and complexity with no L/R drive mismatch and high fore–aft symmetry for bidirectional motion.
 
 ---
 
