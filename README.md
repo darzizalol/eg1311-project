@@ -1,15 +1,14 @@
-# EG1311
-
 ## Design Process
 
 ### 1. Concept Selection
+
 Compared 2-wheel, 3-wheel and 4-wheel configurations.
 
-| Config. | Main Advantage | Main Drawback |
+| Config. | Advantage | Drawback |
 |---|---|---|
-| 2W | Light & simple | Lower stability |
+| 2W | Light, simple | Lower stability |
 | 3W | More stable | Extra drag |
-| 4W | High stability | Heavy & complex |
+| 4W | High stability | Heavy and complex |
 
 **Selected: 2-wheel configuration**
 
@@ -17,62 +16,56 @@ Compared 2-wheel, 3-wheel and 4-wheel configurations.
 
 ### 2. Physics-Based Design
 
-Key design parameters:
+Key parameters:
 
-\[
-R=\text{wheel radius},\quad
-L=\text{chassis length},\quad
-H=\text{chassis height}
-\]
+$$
+R = \text{wheel radius}, \quad
+L = \text{chassis length}, \quad
+H = \text{chassis height}
+$$
 
-The geometry was analysed to ensure sufficient obstacle clearance:
+Obstacle-clearance constraint:
 
-\[
-H_{\min}=f(R,L)
-\]
+$$
+H_{\min} = f(R,L)
+$$
 
 ---
 
 ### 3. MATLAB Simulation
 
-A MATLAB model was used to simulate the robot crossing the obstacle course.
+MATLAB was used to simulate obstacle crossing and evaluate:
 
-Main outputs:
+$$
+(x,y,\theta), \quad C_{\min}
+$$
 
-\[
-(x,y,\theta),\quad \text{clearance},\quad \text{collision check}
-\]
+where $C_{\min}$ is the minimum chassis clearance.
 
 ---
 
 ### 4. Parameter Selection
 
-MATLAB was used to generate design curves:
+Design constraints:
 
-\[
-H_1=f(R),\qquad H_2=g(R)
-\]
+$$
+H_1 = f(R)
+$$
 
-The feasible/intersection region was used to select:
+$$
+H_2 = g(R)
+$$
 
-\[
-R^*,\quad L^*,\quad H^*
-\]
+The intersection / feasible region was used to select the final design parameters:
+
+$$
+R^*, \quad L^*, \quad H^*
+$$
 
 ---
 
 ### 5. Prototype & Testing
 
-\[
-\text{Physics}
-\rightarrow
-\text{Simulation}
-\rightarrow
-\text{Design}
-\rightarrow
-\text{Prototype}
-\rightarrow
-\text{Testing}
-\]
+**Physics → Simulation → Design → Prototype → Testing**
 
-The physical prototype was then tested and refined based on experimental results.
+The physical prototype was tested and refined based on experimental results.
