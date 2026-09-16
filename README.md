@@ -7,34 +7,44 @@ The comparison assumes identical motors and comparable wheel sizes.
 
 | Criterion | 2M: Left–Right | 2M: Front–Rear | 3M | 4M |
 |---|---|---|---|---|
-| **Motor count** | 2 | 2 | 3 | 4 |
-| **Added motor mass** | Low | Low | Medium | High |
-| **Power demand** | Low | Low | Medium | High |
-| **Drive symmetry** | Left–right symmetric | Longitudinally symmetric | Layout-dependent | High |
-| **Sensitivity to motor-speed mismatch** | High — causes yaw | Low — mainly causes wheel slip | Medium | High |
-| **Traction potential** | Medium | Medium | High | Highest |
-| **Motor synchronisation** | L/R speed matching required | Less critical for heading | Required | Strongly required |
-| **Control complexity** | Medium | Low | High | High |
-| **Wheel–obstacle interaction** | 2 driven contact points | 2 driven contact points | 3 driven contact points | 4 driven contact points |
-| **Mechanical complexity** | Low | Low | Medium | High |
+| **Mass / power demand** | Low | Low | Medium | High |
+| **Heading sensitivity to speed mismatch** | High | Low | Layout-dependent | Layout-dependent |
+| **Drive-force potential** | Low–Medium | Low–Medium | Medium–High | High |
+| **Implementation complexity** | Low | Low | Medium | High |
 
-**Selected configuration: 2-motor front–rear drive**
+For a left–right drive, the robot yaw rate can be approximated by
 
-For a left–right drive, a wheel-speed mismatch
+$$
+\omega = \frac{v_R-v_L}{b}
+$$
+
+where:
+
+- $v_L$ = left-wheel velocity
+- $v_R$ = right-wheel velocity
+- $b$ = wheel separation
+- $\omega$ = yaw rate
+
+Therefore,
 
 $$
 v_L \neq v_R
+\quad \Rightarrow \quad
+\omega \neq 0
 $$
 
-produces a non-zero yaw rate,
+A small speed mismatch between the left and right motors can therefore cause deviation from straight-line motion under open-loop control.
 
-$$
-\omega \neq 0,
-$$
+**Selected configuration: 2-motor front–rear drive**
 
-which may cause deviation from straight-line motion under open-loop control.
+The front–rear configuration was selected because it:
 
-The front–rear configuration was therefore selected to reduce heading sensitivity to motor-speed mismatch while maintaining low mass, low power demand, and low mechanical complexity.
+- maintains low mass and power demand;
+- reduces heading sensitivity to motor-speed mismatch;
+- requires fewer motors and simpler control;
+- provides sufficient driving force for the obstacle course.
+
+This configuration was then used as the basis for the wheel-size and chassis-geometry analysis.
 
 ---
 
