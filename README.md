@@ -2,25 +2,41 @@
 
 ### 1. Motor Configuration Selection
 
-Different motor counts and layouts were compared.
+Different motor counts and layouts were evaluated based on the main design requirements.
 
-| Config. | Typical Layout | Pros | Cons |
-|---|---|---|---|
-| **2 motors** | 1 front + 1 rear | <ul><li>Low mass</li><li>Low power consumption</li><li>Simple structure</li><li>Fewer components</li></ul> | <ul><li>Lower total traction</li><li>Lower available torque</li><li>More sensitive to weight distribution</li></ul> |
-| **3 motors** | 2 front + 1 rear / 1 front + 2 rear | <ul><li>Higher driving force</li><li>Better traction</li><li>More flexible motor placement</li></ul> | <ul><li>Asymmetric force distribution</li><li>Uneven load sharing</li><li>Harder motor synchronisation</li><li>Higher mass and power consumption</li></ul> |
-| **4 motors** | 2 front + 2 rear | <ul><li>Highest driving force</li><li>High traction</li><li>Balanced force distribution</li><li>Good load sharing</li></ul> | <ul><li>Highest mass</li><li>Highest power consumption</li><li>More wiring</li><li>More complex motor synchronisation</li></ul> |
+| Design Criterion | 2 Motors: Left–Right | 2 Motors: Front–Rear | 3 Motors | 4 Motors |
+|---|---|---|---|---|
+| **Mass** | ✓ Low | ✓ Low | Medium | ✗ High |
+| **Power consumption** | ✓ Low | ✓ Low | Medium | ✗ High |
+| **Mechanical complexity** | ✓ Simple | ✓ Simple | Medium | High |
+| **Driving force / traction** | Medium | Medium | High | ✓ Highest |
+| **Straight-line motion** | Sensitive to motor-speed mismatch | ✓ Better longitudinal alignment | Medium | Requires motor synchronisation |
+| **Force symmetry** | ✓ Left–right symmetric | ✓ Along chassis centreline | Depends on layout | ✓ Symmetric |
+| **Obstacle traversal** | Possible yaw on bump/ramp | ✓ Force aligned with travel direction | More wheel–obstacle interaction | More wheel–obstacle interaction |
+| **Motor synchronisation** | Required between L/R motors | Less critical for heading | Difficult | Most difficult |
+| **Control complexity** | Medium | ✓ Low | High | High |
 
 **Selected: 2-motor front–rear configuration**
 
-Main reasons:
-- lower mass and power consumption;
-- simpler mechanical structure;
-- fewer motors to control and synchronise;
-- sufficient driving force for the required obstacles;
-- compact layout suitable for the chassis design.
+Main considerations:
 
-**Main trade-off:**  
-Lower driving force → wheel size, chassis geometry and weight distribution require further optimisation.
+- low mass and power consumption;
+- simple mechanical and control architecture;
+- driving force aligned with the direction of travel;
+- reduced sensitivity to left–right motor-speed mismatch;
+- fewer wheel–obstacle interactions when crossing the bump and ramp.
+
+For a conventional left–right differential drive,
+
+$$
+v_L \neq v_R
+\quad \Rightarrow \quad
+\omega \neq 0
+$$
+
+where a small difference between the left and right wheel velocities may cause unwanted yaw.
+
+Therefore, the **front–rear motor layout** was selected for more consistent straight-line motion on the obstacle course.
 
 ---
 
