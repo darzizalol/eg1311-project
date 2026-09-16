@@ -2,32 +2,6 @@
 
 ### 1. Motor Configuration Selection
 
-Candidate drive configurations were compared assuming identical motors and comparable wheel sizes.
-
-| Criterion | 2M: Left–Right | 2M: Front–Rear | 3M: 2F+1R / 1F+2R | 4M: 2F+2R |
-|---|---|---|---|---|
-| **Mass / power demand** | Low | **Low** | Medium | High |
-| **Sensitivity to L/R speed mismatch** | High — induces yaw | **Low — no L/R drive pair** | Layout-dependent | Requires L/R matching |
-| **Fore–aft symmetry** | Layout-dependent | **High** | Low | High |
-| **Bidirectional consistency** | Medium | **High** | Low — geometry changes with direction | High |
-| **Implementation complexity** | Low | **Low** | Medium | High |
-
-For a left–right drive,
-
-$$
-\omega \approx \frac{v_R-v_L}{b}
-$$
-
-so a left–right speed mismatch directly introduces yaw.
-
-**Selected: 2-motor front–rear configuration**
-
-It provides low mass and complexity, avoids L/R motor-induced yaw, and preserves fore–aft symmetry for bidirectional motion.
-
----
-
-### 1. Motor Configuration Selection
-
 Four candidate drive configurations were considered under the same motor and wheel assumptions.
 
 | Criterion | 2M: Left–Right | 2M: Front–Rear | 3M | 4M |
@@ -47,7 +21,7 @@ so a left–right speed mismatch directly introduces yaw.
 
 **Selected: 2-motor front–rear configuration**
 
-It combines low mass and implementation complexity with reduced sensitivity to L/R speed mismatch and good fore–aft symmetry for bidirectional motion.
+It provides low mass and complexity, avoids L/R motor-induced yaw, and preserves fore–aft symmetry for bidirectional motion.
 
 ---
 
