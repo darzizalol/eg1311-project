@@ -2,41 +2,39 @@
 
 ### 1. Motor Configuration Selection
 
-Different motor counts and layouts were evaluated based on the main design requirements.
+Four candidate motor configurations were considered.  
+The comparison assumes identical motors and comparable wheel sizes.
 
-| Design Criterion | 2 Motors: Left–Right | 2 Motors: Front–Rear | 3 Motors | 4 Motors |
+| Criterion | 2M: Left–Right | 2M: Front–Rear | 3M | 4M |
 |---|---|---|---|---|
-| **Mass** | ✓ Low | ✓ Low | Medium | ✗ High |
-| **Power consumption** | ✓ Low | ✓ Low | Medium | ✗ High |
-| **Mechanical complexity** | ✓ Simple | ✓ Simple | Medium | High |
-| **Driving force / traction** | Medium | Medium | High | ✓ Highest |
-| **Straight-line motion** | Sensitive to motor-speed mismatch | ✓ Better longitudinal alignment | Medium | Requires motor synchronisation |
-| **Force symmetry** | ✓ Left–right symmetric | ✓ Along chassis centreline | Depends on layout | ✓ Symmetric |
-| **Obstacle traversal** | Possible yaw on bump/ramp | ✓ Force aligned with travel direction | More wheel–obstacle interaction | More wheel–obstacle interaction |
-| **Motor synchronisation** | Required between L/R motors | Less critical for heading | Difficult | Most difficult |
-| **Control complexity** | Medium | ✓ Low | High | High |
+| **Motor count** | 2 | 2 | 3 | 4 |
+| **Added motor mass** | Low | Low | Medium | High |
+| **Power demand** | Low | Low | Medium | High |
+| **Drive symmetry** | Left–right symmetric | Longitudinally symmetric | Layout-dependent | High |
+| **Sensitivity to motor-speed mismatch** | High — causes yaw | Low — mainly causes wheel slip | Medium | High |
+| **Traction potential** | Medium | Medium | High | Highest |
+| **Motor synchronisation** | L/R speed matching required | Less critical for heading | Required | Strongly required |
+| **Control complexity** | Medium | Low | High | High |
+| **Wheel–obstacle interaction** | 2 driven contact points | 2 driven contact points | 3 driven contact points | 4 driven contact points |
+| **Mechanical complexity** | Low | Low | Medium | High |
 
-**Selected: 2-motor front–rear configuration**
+**Selected configuration: 2-motor front–rear drive**
 
-Main considerations:
-
-- low mass and power consumption;
-- simple mechanical and control architecture;
-- driving force aligned with the direction of travel;
-- reduced sensitivity to left–right motor-speed mismatch;
-- fewer wheel–obstacle interactions when crossing the bump and ramp.
-
-For a conventional left–right differential drive,
+For a left–right drive, a wheel-speed mismatch
 
 $$
 v_L \neq v_R
-\quad \Rightarrow \quad
-\omega \neq 0
 $$
 
-where a small difference between the left and right wheel velocities may cause unwanted yaw.
+produces a non-zero yaw rate,
 
-Therefore, the **front–rear motor layout** was selected for more consistent straight-line motion on the obstacle course.
+$$
+\omega \neq 0,
+$$
+
+which may cause deviation from straight-line motion under open-loop control.
+
+The front–rear configuration was therefore selected to reduce heading sensitivity to motor-speed mismatch while maintaining low mass, low power demand, and low mechanical complexity.
 
 ---
 
