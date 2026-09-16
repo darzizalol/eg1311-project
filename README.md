@@ -18,7 +18,7 @@ $$
 \omega \approx \frac{v_R-v_L}{b}
 $$
 
-where $b$ is the track width. Thus, unequal left–right wheel speeds directly introduce yaw.
+Thus, unequal left–right wheel speeds directly introduce yaw.
 
 **Selected: 2-motor front–rear configuration**
 
@@ -26,7 +26,7 @@ It provides low mass and complexity, avoids L/R motor-speed mismatch, and mainta
 
 ---
 
-### 2. Physics-Based Design
+### 2. Physics-Based Analysis
 
 Key parameters:
 
