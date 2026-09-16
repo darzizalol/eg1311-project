@@ -70,10 +70,6 @@ $$
 
 The intersection / feasible region was used to select the final design parameters:
 
-$$
-R^*, \quad L^*, \quad H^*
-$$
-
 ---
 
 ### 5. Prototype & Testing
