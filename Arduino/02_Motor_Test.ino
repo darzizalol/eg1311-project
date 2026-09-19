@@ -20,7 +20,6 @@ void setup() {
   pinMode(MOTOR_PIN_1, OUTPUT);
   pinMode(MOTOR_PIN_2, OUTPUT);
   Serial.begin(9600);
-  Serial.println("Ready!");
   Serial.println("Input: f / b / s");
 }
 
