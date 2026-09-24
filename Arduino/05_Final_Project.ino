@@ -10,10 +10,10 @@ const int ECHO_PIN = 13;
 
 // Control Parameters
 const float SPEED_OF_SOUND = 0.0345;         // cm/μs
-const float WALL_DISTANCE = 15.0;            // cm
+const float WALL_DISTANCE = 16.0;            // cm
 const unsigned long ECHO_TIMEOUT = 30000;    // μs
 const int HOLD_ANGLE = 180;
-const int LAUNCH_ANGLE = 90;
+const int LAUNCH_ANGLE = 100;
 
 bool ball_released = false;
 
@@ -43,11 +43,24 @@ float measureDistance() {
 }
 
 void launchBall() {
-  delay(3000);
+  delay(5000);
   servo.write(LAUNCH_ANGLE);
   delay(1000);
   servo.write(HOLD_ANGLE);
   ball_released = true;
+}
+
+void blinkBuiltInLED(int times) {
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  for (int i = 0; i < times; i++) {
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(1000);
+  }
+
+  pinMode(LED_BUILTIN, INPUT);
 }
 
 void setup() {
@@ -58,6 +71,7 @@ void setup() {
   Serial.begin(9600);
   servo.attach(SERVO_PIN);
   servo.write(HOLD_ANGLE);
+  blinkBuiltInLED(3);
 }
 
 void loop() {
