@@ -39,8 +39,8 @@ void loop() {
         break;
 
       case 's':
-        stop();
         Serial.println("stop");
+        stop();
         break;
 
       default:

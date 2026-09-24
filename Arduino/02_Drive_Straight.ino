@@ -1,8 +1,13 @@
 // Pin Definitions
-const int TRIG_PIN = 13;
-const int ECHO_PIN = 12;
 const int MOTOR_PIN_1 = 5;
 const int MOTOR_PIN_2 = 6;
+const int TRIG_PIN = 12;
+const int ECHO_PIN = 13;
+
+// Control Parameters
+const float SPEED_OF_SOUND = 0.0345;         // cm/μs
+const float WALL_DISTANCE = 20.0;            // cm
+const unsigned long ECHO_TIMEOUT = 30000;    // μs
 
 void forward() {
   digitalWrite(MOTOR_PIN_1, HIGH);
@@ -20,6 +25,8 @@ void stop() {
 }
 
 float measureDistance() {
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH);
   delayMicroseconds(10);
   digitalWrite(TRIG_PIN, LOW);
@@ -28,17 +35,15 @@ float measureDistance() {
 }
 
 void setup() {
-  pinMode(TRIG_PIN, OUTPUT);
-  pinMode(ECHO_PIN, INPUT);
   pinMode(MOTOR_PIN_1, OUTPUT);
   pinMode(MOTOR_PIN_2, OUTPUT);
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
   Serial.begin(9600);
-  digitalWrite(TRIG_PIN, LOW);
 }
 
 void loop() {
   float distance = measureDistance();
-  Serial.print("Distance: ");
   Serial.print(distance);
   Serial.print(" cm -> ");
 
@@ -50,4 +55,5 @@ void loop() {
     forward();
   }
 }
+
 

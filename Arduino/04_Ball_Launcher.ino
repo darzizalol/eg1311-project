@@ -1,7 +1,10 @@
 #include <Servo.h>
 Servo servo;
 
+// Pin Definitions
 const int SERVO_PIN = 11;
+
+// Control Parameters
 const int HOLD_ANGLE = 180;
 const int LAUNCH_ANGLE = 90;
 
