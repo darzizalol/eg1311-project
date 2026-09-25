@@ -55,10 +55,7 @@ R &= \sqrt{l^2+h^2}\sin(\theta-\alpha) \\
 \end{aligned}
 $$
 
-$$ h = l\tan\theta - R\sec\theta $$
-$$ H_{\min} = \frac{L}{2}\tan\theta+R(1-\sec\theta) $$
-
-Therefore, $H_{\min}$ is determined by $R$ and $L$.
+$$ h_{\min} = l\tan\theta - R\sec\theta $$
 
 ---
 
