@@ -45,8 +45,7 @@ $$
 $$
 \begin{aligned}
 R
-&\le \sqrt{W^{2}+h^{2}}\,\sin\beta \\
-&= \sqrt{W^{2}+h^{2}}\,\sin(\theta-\alpha) \\
+&\le \sqrt{W^{2}+h^{2}}\,\sin(\theta-\alpha) \\
 &= \sqrt{W^{2}+h^{2}}
 \left(
 \sin\theta\cos\alpha-\cos\theta\sin\alpha
