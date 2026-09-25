@@ -57,12 +57,13 @@ R
 $$
 
 $$
-h \le W\tan\theta - R\sec\theta
+h = W\tan\theta - R\sec\theta
 $$
 
 $$
-H \le R + W\tan\theta - R\sec\theta
+H_{\min} = \frac{L}{2}\tan\theta+R(1-\sec\theta)
 $$
+
 
 ---
 
