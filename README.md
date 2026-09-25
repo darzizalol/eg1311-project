@@ -54,14 +54,7 @@ $$
 
 $$
 \begin{aligned}
-R
-&\le W\sin\theta-h\cos\theta \\[4pt]
-h\cos\theta
-&\le W\sin\theta-R \\[4pt]
-h
-&\le \frac{W\sin\theta-R}{\cos\theta} \\[4pt]
-h
-&\le W\tan\theta-R\sec\theta
+h &\le W\tan\theta - R\sec\theta
 \end{aligned}
 $$
 
