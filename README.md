@@ -57,11 +57,11 @@ R
 $$
 
 $$
-h &\le W\tan\theta - R\sec\theta
+h \le W\tan\theta - R\sec\theta
 $$
 
 $$
-H &\le R + W\tan\theta - R\sec\theta
+H \le R + W\tan\theta - R\sec\theta
 $$
 
 ---
