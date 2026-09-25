@@ -54,6 +54,11 @@ $$
 
 where $C_{\min}$ is the minimum chassis clearance.
 
+
+
+https://github.com/user-attachments/assets/65c238bb-515b-462b-b1c2-4497dacc4b94
+
+
 ---
 
 ### 4. Parameter Selection
