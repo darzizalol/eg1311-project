@@ -42,6 +42,37 @@ $$
 H_{\min} = f(R,L)
 $$
 
+$$
+\begin{aligned}
+R
+&\le \sqrt{W^{2}+h^{2}}\,\sin\beta \\
+&= \sqrt{W^{2}+h^{2}}\,\sin(\theta-\alpha) \\
+&= \sqrt{W^{2}+h^{2}}
+\left(
+\sin\theta\cos\alpha-\cos\theta\sin\alpha
+\right) \\
+&= \sqrt{W^{2}+h^{2}}
+\left(
+\sin\theta\frac{W}{\sqrt{W^{2}+h^{2}}}
+-\cos\theta\frac{h}{\sqrt{W^{2}+h^{2}}}
+\right) \\
+&= W\sin\theta-h\cos\theta
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+R
+&\le W\sin\theta-h\cos\theta \\[4pt]
+h\cos\theta
+&\le W\sin\theta-R \\[4pt]
+h
+&\le \frac{W\sin\theta-R}{\cos\theta} \\[4pt]
+h
+&\le W\tan\theta-R\sec\theta
+\end{aligned}
+$$
+
 ---
 
 ### 3. MATLAB Simulation
