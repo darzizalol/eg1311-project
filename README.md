@@ -57,9 +57,11 @@ R
 $$
 
 $$
-\begin{aligned}
 h &\le W\tan\theta - R\sec\theta
-\end{aligned}
+$$
+
+$$
+H &\le R + W\tan\theta - R\sec\theta
 $$
 
 ---
