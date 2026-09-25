@@ -45,17 +45,10 @@ $$
 $$
 \begin{aligned}
 R
-&\le \sqrt{W^{2}+h^{2}}\,\sin(\theta-\alpha) \\
-&= \sqrt{W^{2}+h^{2}}
-\left(
-\sin\theta\cos\alpha-\cos\theta\sin\alpha
-\right) \\
-&= \sqrt{W^{2}+h^{2}}
-\left(
-\sin\theta\frac{W}{\sqrt{W^{2}+h^{2}}}
--\cos\theta\frac{h}{\sqrt{W^{2}+h^{2}}}
-\right) \\
-&= W\sin\theta-h\cos\theta
+&\le \sqrt{W^{2}+h^{2}} \sin(\theta-\alpha) \\
+&= \sqrt{W^{2}+h^{2}} \left( \sin\theta\cos\alpha-\cos\theta\sin\alpha \right) \\
+&= \sqrt{W^{2}+h^{2}} \left( \sin\theta\frac{W}{\sqrt{W^{2}+h^{2}}} - \cos\theta\frac{h}{\sqrt{W^{2}+h^{2}}} \right) \\
+&= W\sin\theta - h\cos\theta
 \end{aligned}
 $$
 
