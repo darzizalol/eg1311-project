@@ -75,6 +75,8 @@ where $C_{\min}$ is the minimum chassis clearance.
 
 https://github.com/user-attachments/assets/dc3acbc7-a89f-401c-93c2-463e7c6e55ca
 
+<img width="1000" alt="Wheel Radius - Wheel Gap - Mass - Finish Time" src="https://github.com/user-attachments/assets/bbd1bc6c-b99c-413e-be8f-006b1efff4ec" />
+
 
 ---
 
