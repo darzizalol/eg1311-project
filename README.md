@@ -58,6 +58,8 @@ $$
 $$ h = l\tan\theta - R\sec\theta $$
 $$ H_{\min} = \frac{L}{2}\tan\theta+R(1-\sec\theta) $$
 
+Therefore, Once $R$ and $l$ are selected, $H_{\min}$ is determined by the geometry.
+
 ---
 
 ### 3. MATLAB Simulation
