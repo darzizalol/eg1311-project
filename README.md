@@ -42,6 +42,9 @@ $$
 H_{\min} = f(R,L)
 $$
 
+
+<img width="1390" height="837" alt="image" src="https://github.com/user-attachments/assets/e077bb53-f559-4c03-b083-926cba7dbf62" />
+
 $$
 \begin{aligned}
 R
