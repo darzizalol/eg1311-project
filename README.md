@@ -48,7 +48,7 @@ $$
 
 $$
 \begin{aligned}
-R &\le \sqrt{l^2+h^2}\sin(\theta-\alpha) \\
+R &= \sqrt{l^2+h^2}\sin(\theta-\alpha) \\
 &= \sqrt{l^2+h^2}\left(\sin\theta\cos\alpha-\cos\theta\sin\alpha\right) \\
 &= \sqrt{l^2+h^2}\left(\sin\theta\frac{l}{\sqrt{l^2+h^2}}-\cos\theta\frac{h}{\sqrt{l^2+h^2}}\right) \\
 &= l\sin\theta-h\cos\theta
