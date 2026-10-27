@@ -43,24 +43,12 @@ float measureDistance() {
 }
 
 void launchBall() {
-  delay(5000);
+  delay(2000);
   servo.write(LAUNCH_ANGLE);
   delay(1000);
   servo.write(HOLD_ANGLE);
+  delay(2000);
   ball_released = true;
-}
-
-void blinkBuiltInLED(int times) {
-  pinMode(LED_BUILTIN, OUTPUT);
-
-  for (int i = 0; i < times; i++) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(1000);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
-  }
-
-  pinMode(LED_BUILTIN, INPUT);
 }
 
 void setup() {
@@ -71,7 +59,6 @@ void setup() {
   Serial.begin(9600);
   servo.attach(SERVO_PIN);
   servo.write(HOLD_ANGLE);
-  blinkBuiltInLED(3);
 }
 
 void loop() {
