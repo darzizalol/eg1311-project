@@ -1,3 +1,7 @@
+<p align="center">
+<img width="600" alt="Render_Front_Side" src="https://github.com/user-attachments/assets/3bb16754-3754-4e76-8da1-7861a0884c10" />
+</p>
+
 ## Design Process
 
 ### 1. Motor Configuration Selection
